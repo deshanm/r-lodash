@@ -19,8 +19,8 @@ import toInteger from './toInteger.js'
  * chunk(['a', 'b', 'c', 'd'], 3)
  * // => [['a', 'b', 'c'], ['d']]
  */
-function chunk(array, size = 1) {
-  size = Math.max(toInteger(size), 0)
+function chunk(array: unknown[], size: string | number | undefined) {
+  size = Math.max(size, 0)
   const length = array == null ? 0 : array.length
   if (!length || size < 1) {
     return []
