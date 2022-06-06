@@ -27,5 +27,6 @@
     "allowUnusedLabels": true,
     "allowUnreachableCode": true,
     "skipLibCheck": true
-  }
+  },
+
 }
