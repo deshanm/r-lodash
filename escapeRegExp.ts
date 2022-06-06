@@ -19,10 +19,10 @@ const reHasRegExpChar = RegExp(reRegExpChar.source)
  * escapeRegExp('[lodash](https://lodash.com/)')
  * // => '\[lodash\]\(https://lodash\.com/\)'
  */
-function escapeRegExp(string) {
+function escapeRegExp(string: string | null | undefined) : string {
   return (string && reHasRegExpChar.test(string))
     ? string.replace(reRegExpChar, '\\$&')
-    : (string || '')
+    : string
 }
 
 export default escapeRegExp
