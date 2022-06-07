@@ -218,9 +218,9 @@ function baseClone(value, bitmask, customizer, key, object, stack) {
     return result
   }
 
-  if (isTypedArray(value)) {
-    return result
-  }
+  // if (isTypedArray(value)) {
+  //   return result
+  // }
 
   const keysFunc = isFull
     ? (isFlat ? getAllKeysIn : getAllKeys)
