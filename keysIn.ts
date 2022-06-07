@@ -20,7 +20,11 @@
  * _.keysIn(new Foo);
  * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
  */
-function keysIn(object) {
+
+interface InputProp {
+  [key: string]: string | number
+}
+function keysIn(object: InputProp) {
   const result = []
   for (key in object) {
     result.push(key)
